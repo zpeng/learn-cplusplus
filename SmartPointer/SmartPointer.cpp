@@ -23,14 +23,17 @@ public:
   }
 
   // copy constructor
-  SmartPointer(const SmartPointer& sp) {
-    cout << "Call SmartPointer copy constructor!" << endl;
-    m_ptr = new T;
-    *m_ptr = *sp.m_ptr; // do deep copy, not the memory address but the content of the m_ptr
-  }
+  SmartPointer(const SmartPointer& sp) = delete;  // disable the copy constructor 
+  //{
+   // cout << "Call SmartPointer copy constructor!" << endl;
+   // m_ptr = new T;
+   // *m_ptr = *sp.m_ptr; // do deep copy, not the memory address but the content of the m_ptr
+  //}
 
   // copy assignment
-  SmartPointer& operator =(const SmartPointer& sp){
+  SmartPointer& operator=(const SmartPointer& sp) = delete;
+  /*
+  {
     cout << "Call SmartPointer copy assignment!" << endl;
     // check if ref to itself
     if (&sp == this) {
@@ -46,6 +49,7 @@ public:
 
     return *this;
   }
+  */
 
   // move constructor
   SmartPointer(SmartPointer&& sp): m_ptr(sp.m_ptr) {
