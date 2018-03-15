@@ -30,13 +30,39 @@ private:
 };
 
 
+class MyClass {
+public:
+
+  // default constructor
+  MyClass() {
+    cout << "Call Default Constructor" << endl;
+  }
+
+  ~MyClass() {
+    cout << "Call Destructor" << endl;
+  }
+
+  MyClass(const MyClass &o) {
+    cout << "Call Copy Constructor" << endl;
+  }
+
+  MyClass& operator= (MyClass& o){
+    cout << "Call Copy assignment" << endl;
+    return o;
+  }
+};
+
+MyClass getMyClassByValue() {
+  MyClass c;
+  return c;
+}
 
 int _tmain(int argc, _TCHAR* argv[])
 {
 
   A a;
 
-  cout << endl << endl;
+  cout << endl;
 
   /*
   Call order will be 
@@ -46,7 +72,21 @@ int _tmain(int argc, _TCHAR* argv[])
   */
 
   B b;
- 
+  cout << endl << endl;
+
+  MyClass mc; // call defualt constructor
+  cout << endl;
+  
+  MyClass mc2(mc); // call copy constructor
+  cout << endl;
+  
+  MyClass mc3 = getMyClassByValue(); // call copy constructor
+  cout << endl;
+  
+  MyClass mc4;
+  mc4 = getMyClassByValue();
+  cout << endl;
+
   int i;
   cin >> i;
 	return 0;
