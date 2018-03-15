@@ -1,6 +1,7 @@
 # learn-cplusplus
 
-- SmartPointer - To demonstrate the ideal behind smart pointer to manage dynamically allocate memory.
+- SmartPointer
+  - To demonstrate the ideal behind smart pointer to manage dynamically allocate memory.
   - move semantics (move constructor and move operator)
   - code doesn't compile for disabling copy constructor and assignment
 
@@ -22,6 +23,8 @@
     - finally call its own constructor
 
 
-To-do:
 
+
+
+To-do:
 - Write sample code to using std::unique_ptr and std::share_ptr
