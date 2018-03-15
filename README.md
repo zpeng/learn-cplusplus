@@ -12,8 +12,14 @@
 - LinkedList (single linked)
   - using struct and raw pointer
   - traversal and print the list
-  - delete a given node
-  - reverse a list
+  - delete a given node from the list
+  - reverse the list
+
+- Constructor
+  - to demonstrate the order of the constructors within a inheritance tree being called
+    - first it calls its parent class constructor (top-down)
+    - then initialise its own member variables
+    - finally call its own constructor
 
 
 To-do:
