@@ -57,6 +57,17 @@ MyClass getMyClassByValue() {
   return c;
 }
 
+class Value {
+public:
+  Value(int i): m_value(i) {};
+
+  int getValue(){
+    return m_value;
+  }
+private:
+  int m_value;
+};
+
 int _tmain(int argc, _TCHAR* argv[])
 {
 
@@ -86,6 +97,10 @@ int _tmain(int argc, _TCHAR* argv[])
   MyClass mc4;
   mc4 = getMyClassByValue();
   cout << endl;
+
+  Value v(3);
+  v = 4; // call the conversion constructor
+  cout << v.getValue() << endl;
 
   int i;
   cin >> i;

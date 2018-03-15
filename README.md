@@ -22,6 +22,7 @@
     - then initialise its own member variables
     - finally call its own constructor
   - also explores how the copy constructor and copy assignment being invoked
+  - an example to use conversion constructor
 
 
 
