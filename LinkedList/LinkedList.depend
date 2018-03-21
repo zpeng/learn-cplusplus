@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1521666178 source:c:\private\learn-cplusplus\linkedlist\main.cpp
+	<iostream>
+	<string>
+
