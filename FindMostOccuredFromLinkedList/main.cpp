@@ -33,42 +33,27 @@ LinkedListNode* appendNode(LinkedListNode *head, int value){
 }
 
 void findMostOccured(LinkedListNode *head){
-    std::vector<int> countArr = {0,0,0,0,0,0,0,0,0,0};
-
+    std::map<int, int> maxMap;
 
     LinkedListNode *p = head;
     while(p != nullptr){
-        countArr[p->value] += 1;
+        maxMap[p->value] +=  1;
         p = p->next;
-    }
-
-    std::map<int, int> maxMap;
-    int max_v = 0;
-    int max_p = 0;
-    for(auto i: countArr){
-        if (i == max_v) {
-            // just add to the map
-            maxMap.insert(std::make_pair(max_p, i));
-        } else if (i > max_v){
-             max_v = i;
-             maxMap.clear();
-             maxMap.insert(std::make_pair(max_p, i));
-        }
-        ++max_p;
     }
 
     p = head;
     int r_v = 0;
     int r_c = 0;
     while(p != nullptr){
-        if(maxMap.count(p->value)) {
-            r_v = p->value;
+        // reads count from the map
+        if (maxMap[p->value] > r_c) {
+            // here always keep in a such state that count is a max and value is closest to the head
             r_c = maxMap[p->value];
-            break;
+            r_v = p->value;
         }
-        p = p->next;
-    }
 
+        p = p-> next;
+    }
 
     cout << "Element " << r_v << " occurs " << r_c << " time(s)";
 }
