@@ -1,0 +1,1 @@
+C++ Overloading is static polymorphic, e.g. Here the compile, based on the number and type of arguments, can determine which function to call. Dynamic polymorphism, which in C++ is called Overriding, allows us to determine the actual function method to be executed at run-time rather than compile time.
