@@ -1,0 +1,1 @@
+This project is to demonstrate the ideal of override vs polymorphism (virtual functions)
