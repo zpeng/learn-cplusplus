@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1521583006 source:c:\private\learn-cplusplus\findmostoccuredfromlinkedlist\main.cpp
+	<iostream>
+	<sstream>
+
