@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1521796787 source:c:\private\learn-cplusplus\exception\main.cpp
+	<iostream>
+	<string>
+
